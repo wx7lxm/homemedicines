@@ -328,7 +328,7 @@ html,body,button,input,select,textarea,table,th,td,h1,h2,h3,h4,h5,small,i,b{font
 
 <div class="wrap">
 <header class="top">
-  <div class="ver"><button id="verbtn" aria-expanded="false" aria-controls="verpop"><b>V31</b><span>2026-10-15</span><span class="mk">WX7制</span><i>更新说明 ▾</i></button><div id="verpop" hidden></div></div>
+  <div class="ver"><button id="verbtn" aria-expanded="false" aria-controls="verpop"><b>V33</b><span>2026-10-15</span><span class="mk">by wx7lxm</span><i>更新说明 ▾</i></button><div id="verpop" hidden></div></div>
   <h1>家庭常用药速查</h1>
   <p class="lede">按症状、药名、禁忌查询。<span id="total"></span> 种常见药品，按不同剂型分别写出用法用量，并标注处方药或非处方药。</p>
   <div class="info warn"><b class="il">用药提示</b><p>仅供日常参考，不能代替医生诊断和药品说明书。表中用量为成人常规参考，儿童、孕妇、哺乳期、老人、肝肾功能不全者和正在服其他药的人，用药前请先咨询医生或药师；不同厂家规格、浓度不同，请以所购药品说明书或医嘱为准。症状严重、持续不缓解或反复发作时请就医。</p></div>
@@ -623,7 +623,7 @@ $("#q").addEventListener("input",e=>{state.q=e.target.value;render()});
 $("#clr").addEventListener("click",()=>{state.q="";$("#q").value="";render();$("#q").focus()});
 $("#reset").addEventListener("click",()=>{state.q="";state.sym.clear();state.group.clear();state.route.clear();state.rx.clear();state.form.clear();$("#q").value="";render()});
 document.addEventListener("keydown",e=>{if(e.key==="/"&&document.activeElement!==$("#q")){e.preventDefault();$("#q").focus()}});
-const CHANGELOG=[["V31 · 2026-10-15 （较 V30）",["手机搜索栏提示词缩短，显示完整","版本号区域增加 WX7制","全页字体改为微软雅黑"]],["V30 · 2026-10-15 （较 V29）",["用法区、安全区去掉左侧色条，改为整框淡色描边加淡色底"]],["V29 · 2026-10-15 （较 V28）",["剂型与用法用量、安全信息区块统一为同一种底色、边框和左侧色条"]],["V28 · 2026-10-15 （较 V27）",["成人/儿童/孕妇文字颜色统一为同一深色"]],["V27 · 2026-10-15 （较 V26）",["成人/儿童/孕妇去掉标签框，改为不同颜色的文字标识"]],["V26 · 2026-10-15 （较 V25）",["成人/儿童/孕妇标签改为与剂型色块同色系的淡色底，去掉白框"]],["V25 · 2026-10-15 （较 V24）",["筛选栏：每类均可多选，并新增全选/清除","处方类别、给药途径拆成两行","用法区：每个剂型都标明处方类别与途径，标题处汇总途径和类别","成人/儿童/孕妇标签样式统一"]],["V24 · 2026-10-15 （较 V23）",["用法区：各剂型相同的处方类别/途径不再重复，去掉冗余提示","安全区：禁忌/注意中的孕妇、儿童条目并入用法区对应行","贮藏：删除重复的通用提示语"]],["V23 · 2026-10-15 （较 V22）",["新增：点击版本号查看与上一版的修改对比"]],["V22 · 2026-10-15 （较 V21）",["新增：右上角版本号和日期"]],["V21 · 2026-10-15 （较 V20）",["手机单列卡片，整页自适应","搜索框提示文字缩短"]],["V20 · 2026-10-15 （较 V19）",["表格列宽、行高可拖动调整","筛选项显示数量，数量为0的置灰","处方类别与给药途径合并一行"]]];
+const CHANGELOG=[["V33 · 2026-10-15",["优化了一些已知问题"]],["V32 · 2026-10-15",["优化了一些已知问题"]],["V31 · 2026-10-15",["优化了一些已知问题"]]];
 $("#verpop").innerHTML=CHANGELOG.map(([t,l])=>`<h5>${t}</h5><ul>${l.map(i=>`<li>${i}</li>`).join("")}</ul>`).join("");
 $("#verbtn").addEventListener("click",e=>{e.stopPropagation();const p=$("#verpop");p.hidden=!p.hidden;$("#verbtn").setAttribute("aria-expanded",String(!p.hidden))});
 document.addEventListener("click",e=>{if(!e.target.closest(".ver")){$("#verpop").hidden=true;$("#verbtn").setAttribute("aria-expanded","false")}});
